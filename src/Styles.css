@@ -1,0 +1,125 @@
+.header {
+    display: flex;
+    height: 8vh;
+    background-color:chartreuse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img {
+    height: 50%;
+    width: auto;
+    margin-left: 15vw;
+}
+
+.header .nav {
+    display: flex;
+    list-style: none;
+    margin-right: 15vw;
+}
+
+.header li {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.hero {
+    display: flex;
+    height: 30vh;
+    background-color: cadetblue;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .text {
+    margin-left: 15vw;
+}
+
+.hero img {
+    height: 85%;
+    aspect-ratio: 1.2 / 1;
+    object-fit: cover;
+    margin-right: 15vw;
+}
+
+.hero h1 {
+
+}
+
+.hero p {
+
+}
+
+.hero .reserve {
+
+}
+
+.highlights {
+    display: grid;
+    height: 55vh;
+    background-color:chocolate;
+}
+
+.highlights .top {
+    display: 'flex';
+    margin-left: 15vw;
+    justify-content: space-between;
+}
+
+.highlights .bottom {
+    display: flex;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    justify-content: space-between;
+}
+
+.highlights .menuCard {
+    
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    background-color:aquamarine;
+}
+
+.testimonials h2 {
+    margin-left: 15vw;
+}
+
+.testimonials .testimonialCardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 15vw;
+}
+
+.about {
+    display: flex;
+    height: 40vh;
+    background-color:blueviolet;
+    justify-content: space-between;
+}
+
+.about h1, h3, p {
+    margin-left: 15vw;
+}
+
+.about img {
+    margin-right: 15vw
+}
+
+.footer {
+    display: flex;
+    height: 30vh;
+    background-color:darksalmon;
+    justify-content: space-between;
+}
+
+.footer img {
+    margin-left: 15vw;
+}
+
+.footer #socialMediaLinks {
+    margin-right: 15vw;
+}

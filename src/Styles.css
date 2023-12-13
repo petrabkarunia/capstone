@@ -101,7 +101,15 @@
     justify-content: space-between;
 }
 
-.about h1, h3, p {
+.about h1 {
+    margin-left: 15vw;
+}
+
+.about h3 {
+    margin-left: 15vw;
+}
+
+.about p {
     margin-left: 15vw;
 }
 

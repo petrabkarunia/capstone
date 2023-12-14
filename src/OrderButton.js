@@ -4,8 +4,7 @@ import './Styles.css';
 function OrderButton(){
     return(
         <>
-            <button>Order a delivery</button>
-            <img src='#'/>
+            <a href='#'>Order a delivery &nbsp;&nbsp;<img src='delivery.png'/></a>
         </>
     );
 }

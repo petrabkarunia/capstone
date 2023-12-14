@@ -8,7 +8,7 @@ function Hero(){
             <div className = "text">
                 <h1>Little Lemon</h1>
                 <h3>Chicago</h3>
-                <p>Paragraph</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <PrimaryButton label='Reserve a Table'/>
             </div>
             <img src='restauranfood.jpg'/>

@@ -1,15 +1,15 @@
 import React from 'react';
 import './Styles.css';
 
-function TestimonialCard(){
+function TestimonialCard(props){
     return(
         <div className = 'testimonialCard'>
-            <h5>Rating</h5>
-            <div style={{display: 'flex'}}>
-                <img src='#'/>
-                <h5>Name</h5>
+            <h5>{props.data.rating}</h5>
+            <div className='imageAndName'>
+                <img src={props.data.image}/>
+                <h4>{props.data.name}</h4>
             </div>
-            <p>Review text</p>
+            <p><em>"{props.data.review}"</em></p>
         </div>
     );
 }

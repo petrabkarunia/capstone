@@ -4,7 +4,7 @@ import './Styles.css';
 function PrimaryButton(props){
     return(
         <>
-            <button>{props.label}</button>
+            <button className='primaryButton'>{props.label}</button>
         </>
     );
 }

@@ -3,9 +3,9 @@ import './Styles.css';
 
 function Footer(){
     return(
-        <div className = "footer">
+        <section className = "footer">
             <img src='Mario and Adrian A.jpg'/>
-            <div id='doormatNavigation'>
+            <nav id='doormatNavigation'>
                 <h6>Doormat Navigation</h6>
                 <ul>
                     <li>Home</li>
@@ -15,24 +15,24 @@ function Footer(){
                     <li>Order Online</li>
                     <li>Login</li>
                 </ul>
-            </div>
-            <div id='contact'>
+            </nav>
+            <nav id='contact'>
                 <h6>Contact</h6>
                 <ul>
                     <li>Address</li>
                     <li>Phone Number</li>
                     <li>Email</li>
                 </ul>
-            </div>
-            <div id='socialMediaLinks'>
+            </nav>
+            <nav id='socialMediaLinks'>
                 <h6>Social Media Links</h6>
                 <ul>
                     <li>Address</li>
                     <li>Phone Number</li>
                     <li>Email</li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </section>
     );
 }
 export default Footer;

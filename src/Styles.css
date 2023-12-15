@@ -100,7 +100,7 @@
     font-size: 32px;
 }
 
-.highlights .button {
+.highlights .primaryButton {
     margin-right: 8vw;
 }
 
@@ -236,17 +236,21 @@
 .about {
     display: flex;
     height: 40vh;
-    background-color:white;
+    background-color: #495E57;
     justify-content: space-between;
 }
 
 .about h1 {
     margin-left: 8vw;
     text-wrap: nowrap;
+    color:#F4CE14;
+    font-family: 'Markazi Text';
+    font-size: 32px;
 }
 
 .about h3 {
     margin-left: 8vw;
+    color: #EDEFEE;
 }
 
 .about p {
@@ -254,6 +258,7 @@
     line-height: 1.2em;
     max-height: calc(1.2em * 8);
     overflow: hidden;
+    color: #EDEFEE;
 }
 
 .about img {

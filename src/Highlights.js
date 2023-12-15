@@ -6,19 +6,17 @@ import {menuA, menuB, menuC} from './propData'
 
 function Highlights(){
     return(
-        <div className = 'highlights'>
-            <div className='top'>
+        <section className = 'highlights'>
+            <section className='top'>
                 <h1>Specials</h1>
-                <div className='button'>
-                    <PrimaryButton label='Online Menu'/>
-                </div>
-            </div>
-            <div className='bottom'>
+                <PrimaryButton label='Online Menu'/>
+            </section>
+            <section className='bottom'>
                 <MenuCard data={menuA}/>
                 <MenuCard data={menuB}/>
                 <MenuCard data={menuC}/>
-            </div>
-        </div>
+            </section>
+        </section>
     );
 }
 

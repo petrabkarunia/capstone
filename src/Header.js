@@ -4,10 +4,10 @@ import './Styles.css';
 
 function Header(){
     return(
-        <div className = 'header'>
+        <header className = 'header'>
             <img src='logo.svg'/>
             <Nav/>
-        </div>
+        </header>
     );
 }
 

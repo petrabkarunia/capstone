@@ -3,14 +3,14 @@ import './Styles.css';
 
 function TestimonialCard(props){
     return(
-        <div className = 'testimonialCard'>
+        <article className = 'testimonialCard'>
             <h5>{props.data.rating}</h5>
-            <div className='imageAndName'>
+            <section className='imageAndName'>
                 <img src={props.data.image}/>
                 <h4>{props.data.name}</h4>
-            </div>
+            </section>
             <p><em>"{props.data.review}"</em></p>
-        </div>
+        </article>
     );
 }
 

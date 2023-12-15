@@ -1,21 +1,18 @@
 import './App.css';
 import Header from './Header'
-import Hero from './Hero'
-import Highlights from './Highlights';
-import Footer from './Footer'
-import Testimonials from './Testimonials';
+import Homepage from './Homepage'
 import About from './About';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
 
   return (
     <div>
       <Header/>
-      <Hero/>
-      <Highlights/>
-      <Testimonials/>
-      <About/>
-      <Footer/>
+      <Routes>
+        <Route path="/" element={<Homepage/>}/>
+        <Route path="/about" element={<About />}/>
+      </Routes>
     </div>
   );
 }

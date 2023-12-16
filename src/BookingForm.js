@@ -25,7 +25,7 @@ function BookingForm(props){
                         <select id="time" onChange={(e) => {props.dispatch()}}>
                             {
                                 props.availableTimes.map((item) => (
-                                    <option>{item}</option>
+                                    <option value={item}>{item}</option>
                                 ))
                             }
                         </select>

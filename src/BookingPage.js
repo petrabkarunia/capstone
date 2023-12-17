@@ -1,14 +1,22 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import './Styles.css';
 import BookingForm from "./BookingForm";
+import {fetchAPI, submitAPI} from "./api"
 
 function BookingPage() {
-    const updateTimes = (state, action) => {
-        return state;
+    const initializeTimes = () => {
+        return fetchAPI(new Date())
     };
 
-    const initializeTimes = () => {
-        return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+    const updateTimes = (state, action) => {
+        switch (action.type) {
+            case 'CHANGE_DATE':
+                const date = new Date(action.date);
+                console.log(action.date);
+                return fetchAPI(date);
+            default:
+                return state;
+        }
     };
 
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());

@@ -18,11 +18,11 @@ function BookingForm(props){
                 <fieldset>
                     <div className="field">
                         <label htmlFor="date">Choose Date</label>
-                        <input type="date" id="date" onChange={(e) => {setDate(e.target.value)}}/>
+                        <input type="date" id="date" onChange={(e) => {props.dispatch({type: 'CHANGE_DATE', date: e.target.value})}}/>
                     </div>
                     <div className="field">
                         <label htmlFor="time">Choose Time</label>
-                        <select id="time" onChange={(e) => {props.dispatch()}}>
+                        <select id="time" onChange={(e) => {setDate(e.target.value)}}>
                             {
                                 props.availableTimes.map((item) => (
                                     <option value={item}>{item}</option>

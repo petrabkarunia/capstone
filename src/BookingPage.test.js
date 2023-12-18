@@ -1,22 +1,43 @@
 import BookingForm from "./BookingForm"
 import {render, screen, fireEvent} from "@testing-library/react"
-
+import {initializeTimes, updateTimes} from "./BookingPage";
+import { MemoryRouter } from "react-router-dom";
 
 test('Renders the BookingForm label for date', () => {
     const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    render(<BookingForm availableTimes={availableTimes}/>);
+    render(<MemoryRouter><BookingForm availableTimes={availableTimes}/></MemoryRouter>);
     const dateLabel = screen.getByText("Choose Date");
     expect(dateLabel).toBeInTheDocument();
 })
 
-test('User can submit the form', () => {
-    global.alert = jest.fn();
-
-    const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    const {getByText, getByLabelText} = render(<BookingForm availableTimes={availableTimes}/>);
-    const submitButton = getByText('Make your reservation');
-
-    fireEvent.click(submitButton);
-
-    expect(global.alert).toHaveBeenCalledWith('Submitted!');
+test('FetchAPI function returns a non-empty array', () => {
+    expect(initializeTimes().length).toBeGreaterThan(0);
 })
+
+test('updateTimes will return different times based on selected date', () => {
+    const initialTimes = ["17:00", "18:00"];
+    expect(updateTimes(initialTimes, {type: 'CHANGE_DATE', date: '12/12/2024'}).length).toBeGreaterThan(2);
+});
+
+test('Date validation works as expected', () => {
+    const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+    const {getByLabelText, getByText} = render(<MemoryRouter><BookingForm availableTimes={availableTimes} /></MemoryRouter>);
+    
+    const dateInput = getByLabelText('Choose Date');
+    dateInput.focus();
+    dateInput.blur();
+
+    const submitButton = getByText('Make your reservation');
+    expect(submitButton).toBeDisabled();
+});
+
+// test('Number of guests validation works as expected', () => {
+//     const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+//     const {getByLabelText, getByText} = render(<MemoryRouter><BookingForm availableTimes={availableTimes} /></MemoryRouter>);
+    
+//     const dateInput = getByLabelText('Number of guests');
+
+//     const submitButton = screen.getByRole('button');
+//     fireEvent.submit(submitButton);
+//     expect(screen.getByText("Please fill out this field")).toBeInTheDocument();
+// });

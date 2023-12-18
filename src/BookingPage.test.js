@@ -30,14 +30,3 @@ test('Date validation works as expected', () => {
     const submitButton = getByText('Make your reservation');
     expect(submitButton).toBeDisabled();
 });
-
-// test('Number of guests validation works as expected', () => {
-//     const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-//     const {getByLabelText, getByText} = render(<MemoryRouter><BookingForm availableTimes={availableTimes} /></MemoryRouter>);
-    
-//     const dateInput = getByLabelText('Number of guests');
-
-//     const submitButton = screen.getByRole('button');
-//     fireEvent.submit(submitButton);
-//     expect(screen.getByText("Please fill out this field")).toBeInTheDocument();
-// });
